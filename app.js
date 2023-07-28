@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const locationsRoute = require('./routes/locations');
+const europe  = require('./controllers/europe');
+app.use('/euroCities', europe);
 app.use('/locations', locationsRoute);
 app.use(cors())
 app.use(express.json());
